@@ -1,0 +1,23 @@
+{
+  "name": "mnbot",
+  "version": "1.0.0",
+  "description": "[![License](https://img.shields.io/github/license/rmuraix/)](./LICENSE)     ## About",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmuraix/mnbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rmuraix/mnbot/issues"
+  },
+  "homepage": "https://github.com/rmuraix/mnbot#readme",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.55"
+  }
+}
