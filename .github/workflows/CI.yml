@@ -1,0 +1,24 @@
+name: CI
+on: 
+  push:
+    tags: [v*]
+    branches: [main]
+  pull-request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+        node-version: 16
+      - name: Run test
+        run: |
+          npm ci
+          npm t
+      - name: Codecov
+        uses: codecov/codecov-action@v3.1.1
+        with: 
+          files: coverage/cobertura-coverage.xml
+          flags: unittests
+          fail_ci_if_error: true
