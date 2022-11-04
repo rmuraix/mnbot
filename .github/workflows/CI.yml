@@ -17,6 +17,19 @@ jobs:
         run: |
           npm ci
           npm t
+      - name: Setup Clasp
+        uses: rmuraix/setup-clasp@6c50c4b921a5d7eff05dc7ecd7218d53f325e1af
+        with:
+          clasp-version: 2.4.2
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          id-token: ${{ secrets.ID_TOKEN }}
+          refresh-token: ${{ secrets.REFRESH_TOKEN }}
+          client-id: ${{ secrets.CLIENT_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          script-id: ${{ secrets.SCRIPT_ID }}
+          root-dir: "./src"
+      - name: push to gas
+        run: clasp push -f
       - name: Codecov
         uses: codecov/codecov-action@v3.1.1
         with: 
