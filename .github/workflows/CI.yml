@@ -18,7 +18,7 @@ jobs:
           npm ci
           npm t
       - name: Setup Clasp
-        uses: rmuraix/setup-clasp@044fcab73577c78a9b041b722bb4a4cfb3eb212c
+        uses: rmuraix/setup-clasp@edf6a6880b37d4fa2e5612b0fc0671a181d87253
         with:
           clasp-version: 2.4.2
           access-token: ${{ secrets.ACCESS_TOKEN }}
